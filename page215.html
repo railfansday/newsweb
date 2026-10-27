@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<title>News Portal Indonesia - Page 215</title>
+<meta name="description" content="Page 215">
+<link rel="canonical" href="https://news2026footballforyoureadnowshareit.surge.sh/page215.html">
+<meta property="og:title" content="News Portal Indonesia - Page 215">
+<meta property="og:description" content="Page 215">
+<meta property="og:url" content="https://news2026footballforyoureadnowshareit.surge.sh/page215.html">
+<meta property="og:site_name" content="News Portal Indonesia">
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:960px;margin:0 auto}
+header{background:#1a73e8;color:#fff;padding:16px 20px;border-radius:10px;margin-bottom:20px}
+header h1{margin:0;font-size:22px}
+nav{background:#fff;padding:12px;border-radius:10px;margin-bottom:20px;display:flex;gap:8px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:6px;color:#555;text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover,nav a.active{background:#1a73e8;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.article-card h2{margin:0 0 10px;font-size:20px;color:#111}
+.article-meta{font-size:12px;color:#888;margin-bottom:14px}
+.article-body{font-size:15px;line-height:1.8;color:#333}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:10px 0}
+.pagination{text-align:center;margin:30px 0}
+.pagination a{display:inline-block;padding:10px 18px;margin:0 4px;background:#fff;border-radius:6px;text-decoration:none;color:#333;font-weight:bold}
+.pagination a.active{background:#1a73e8;color:#fff}
+footer{text-align:center;color:#888;font-size:13px;padding:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All</a><a href="technology.html">📰 Technology</a><a href="property.html">📰 Property</a><a href="gadget.html">📰 Gadget</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1a73e8;border-left:4px solid #1a73e8;padding-left:12px;">News Portal Indonesia - Page 215</h1>
+<article class="article-card">
+    <h2>#3939. The Height Enigma</h2>
+    <div class="article-meta">📅 12 May 2025 | technology |
+        <a href="https://www.joshwcomeau.com/css/height-enigma/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        <img src="https://www.joshwcomeau.com/images/og-height-enigma.png" alt="The Height Enigma" loading="lazy">
+        <p>Back when I was first trying to understand CSS, one of the biggest mysteries to me was why height sometimes wouldn’t work.</p>
+<p>I’ve given this paragraph height: 50%, but as you can see, it hasn’t grown at all! In fact, it doesn’t matter whether I set height: 100% or height: 10000% or height: 0%. Nothing happens.</p>
+<p>In my first few years with CSS, I developed a bit of an intuition for when it would work and when it wouldn’t, but it always sorta felt like rolling the dice. Sometimes it wouldn’t work even when it really seemed like it should!</p>
+<p>Like with so much in CSS, it feels random until you learn about the underlying mechanisms that explain the behaviour, and then it all makes perfect sense. In this blog post, we’ll learn what’s going on here and I’ll share how I solve these sorts of problems.</p>
+<p>This post is intended to be beginner-friendly. As long as you understand the basic syntax of CSS, you should be able to follow along. That said, I think even seasoned CSS veterans might discover a couple of interesting nuggets in here!</p>
+<p>So here’s the core thing to know: in CSS, width and height are fundamentally different. By default, they’re calculated in totally opposite ways.</p>
+<p>This becomes obvious when we really think about it. Block-level elements like <div> will expand to take up all available width, but they don’t do that for height. Instead, they shrinkwrap around their children:</p>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+<p>Notice that the height grows and shrinks with the # of lines, but the width always stays maxed-out, even when there isn’t any content!</p>
+<p>Now, I recognize that this isn’t terribly surprising or mindblowing. This feels totally normal. But it gets interesting when we think about what this tells us about how these values are calculated.</p>
+<p>When calculating an element’s default width, the browser looks up the tree, to the element’s parent. But when calculating an element’s default height, well, that depends on the element’s children. So the browser has to look down the tree instead.</p>
+<p>So, when we tell an element to have width: 50%, that’s no big deal. Browsers already use their parent’s size to calculate their width, so it’s an easy thing to say “OK, take up 50% of that available space”.</p>
+<p>But when we tell an element to have height: 50%, it’s a different story:</p>
+<p>See the problem? They’re trying to derive their size from each other. It’s a circular calculation that never resolves. A mystery wrapped in a riddle. A paradox. As a result, browsers will ignore the height: 50% declaration on the child.</p>
+<p>If we don’t give an element an explicit width, it’ll use the default value of auto.</p>
+<p>Given that elements grow to fill the available space, you might think that this is the same as setting width: 100%, but there’s a subtle difference. Check out what happens when we give that same element some left/right margin:</p>
+<p>When we set width: 100%, we’re telling the element that it should be the same width as its containing block. If the parent is 500px wide, this child will be 500px wide. If we decide to add some margin on top of that, it won’t shrink to accommodate it; instead, the margin will cause the element to overflow.*At least, this is how it works in Flow layout. In Flexbox, width is more flexible. Like all CSS properties, the implementation can vary between layout modes.</p>
+<p>By contrast, width: auto is a more fluid/dynamic value. Instead of saying “copy/paste the containing block’s width”, we’re saying “grow as much as you can, but take things like margin into account”.</p>
+<p>In order for something like height: 50% to work, the parent’s height can’t depend on the child’s height.</p>
+<p>We can set this up by giving the parent an explicit height:</p>
+<p>Our parent <main> is given height: 300px, which short-circuits the normal calculation. Instead of calculating a dynamic size based on its children, this <main> tag is locked to a fixed value of 300 pixels.</p>
+<p>In that case, the child’s height: 50% is resolvable. We can calculate 50% of 300px.</p>
+<p>Now, we generally shouldn’t use the px unit for height. Pixels don’t scale with the user’s chosen text size. Folks with poor vision tend to crank up the default font-size, which can cause text to overflow and layouts to break if we use pixels for our container sizes. I have a separate blog post that covers the accessibility implications of pixels(opens in new tab), if you’d like to learn more about this.</p>
+<p>Fortunately, the rem unit works just as well for establishing a fixed, knowable size:</p>
+<p>Now, here’s where it gets complicated. We can nest percentage-based heights, as long as they’re all calculated from an explicit size:</p>
+<p>The top-level <main> tag defines a fixed height of 24rem. A new .wrapper child takes up 50% of that height, which is calculated to be 12rem. So, even though .wrapper uses a percentage-based height, it’s still a “knowable” value.</p>
+<p>By “knowable”, I mean that the value can be inferred from the CSS given to this element or its ancestors higher up in the tree. It doesn’t depend on the size of its descendants. “Knowable” isn’t a term of art, it’s my own word.</p>
+<p>And because .wrapper’s height is knowable, we can use a percentage-based height for the <p> within. Whenever an element sets an explicit height in pixels or rems, that entire slice of the DOM tree becomes knowable, and we can use percentages anywhere inside.</p>
+<p>Eagle-eyed readers may have noticed a slight discrepancy in the playground above: the <p> tag is given height: 50%, which suggests it should resolve to 6rem (50% of 50% of 24rem), but if you inspect it in the devtools, you’ll see that it’s actually a bit smaller:</p>
+<p>Annoyingly, the Chrome devtools only shows these units in pixels, so we’ll need to do some conversion. By default, each rem is 16px, so we would expect this box to be 96px tall (16px × 6). Instead, it’s only 5rem tall (80px). Where did that extra rem go?</p>
+<p>Well, to make the nested relationship between these elements clearer, I gave the middle element, .wrapper, 1rem of padding:</p>
+<p>This means that while .wrapper itself is 12rem tall, its content box is only 10rem; we have to subtract 1rem from the top and bottom.</p>
+<p>So, when we tell <p> to have height: 50%, that percentage isn’t based on the parent element’s total size, it’s based on the parent’s “content box”. This is the space inside the element, within its border and padding. So, the element winds up being 5rem tall (50% of 10rem).</p>
+<p>A helpful analogy: when we measure the dimensions of a room in our house, we measure the usable space between the walls. We don’t also include the drywall and insulation. Similarly, our child <p> can’t actually use the space consumed by padding, and so we measure based on the inner content space.</p>
+<p>I’m oversimplifying a bit here: technically, percentages are calculated based on the element’s “containing block”, and it also depends on the value of the box-sizing CSS property. We cover all this stuff in more depth in my CSS course, CSS for JavaScript Developers(opens in new tab).</p>
+<p>So here’s an interesting question: what if we use a percentage-based height on the top-level html element?</p>
+<p>Well, let’s give it a shot. On this blog, I use iframes for the “RESULT” pane, so we essentially have our own mini browser window:</p>
+<p>Look at that! The <html> tag grows to fill the whole viewport.</p>
+<p>This works because the root <html> tag is special. Unlike every other node on the page, <html> doesn’t have a parent, since it’s at the very top of the tree. So when we set height: 100%, it isn’t using some parent element’s content box. Instead, it uses the viewport itself.*To be more precise, it uses the “initial containing block”, a rectangle the same size and shape as the viewport.</p>
+<p>Crucially, this means that the <html> tag has a knowable height, since the dimensions of the viewport don’t depend at all on the children within. There is no CSS I can write that will affect the width or height of the browser window, after all!</p>
+<p>So, percentage-based heights work on the top-level DOM node, and we can funnel that value through the whole tree like a hot potato. For many years, this was a core part of my CSS reset, to ensure that my app’s main layout filled the whole viewport:</p>
+<p>These days, this trick isn’t necessary anymore; if we want an element to take up 100% of the viewport, we can use the svh unit (Small Viewport Height; similar to vh but without the funky behaviour on mobile browsers). But it’s still worth understanding how percentage-based heights work, since we don’t always want things to be sized relative to the viewport.</p>
+<p>The trouble with setting something like height: 24rem is that it can lead to overflows if there’s too much content to fit in that space:</p>
+<p>Let’s try to solve this by swapping height with min-height:</p>
+<p>At first glance, that looks great… But if we remove some of the content, we discover that our percentage-based height has stopped working:</p>
+<p>This is the sort of thing that always threw me off. I’m still giving the parent an explicit knowable size when I set min-height: 24rem, aren’t I?</p>
+<p>It feels that way, at least to me, because we’re using a number, 24rem. But when we use min-height instead of height, we aren’t actually giving the element a fixed size.</p>
+<p>Remember, the thing we need is for the parent’s height to not depend on the child’s height. That’s how we avoid the circular paradox thing. And we aren’t fulfilling that condition here; the parent will still grow and shrink based on its children. We’ve set a lower bound, but the actual height can be anything from 24rem to infinity, depending on what’s inside.</p>
+<p>Ok, so how do we actually solve this problem?</p>
+<p>So far, all of the examples we’ve seen have been using CSS’ default layout mode, Flow layout. It turns out that both Flexbox and Grid can really help us out here!</p>
+<p>Try deleting most of the content inside that <p>, and notice that the peach-colored element still fills its container. This is exactly what we want! 😄</p>
+<p>When we set display: grid, we create something called a “grid formatting context”. This means that the child within, .wrapper, will use Grid layout instead of Flow layout.</p>
+<p>And in Grid layout, elements don’t shrinkwrap around their children. Instead, children will grow to fill their grid cell, both horizontally and vertically. By default, grids will have a single row and a single column, and that row is stretched across the entire grid surface. This means that we don’t have to set height: 100%. The child grows automatically. ✨</p>
+<p>We can also use Flexbox, though we do have to instruct the child to fill the available space in the primary axis with flex: 1:</p>
+<p>As I shared in my blog post “Understanding Layout Algorithms”(opens in new tab), CSS is kinda like a constellation of mini-languages, each with its own special purpose. By default, most HTML tags use Flow layout, which is essentially the “Microsoft Word” layout algorithm. It’s great for articles and other digital documents, but it’s not so good for building web app layouts.</p>
+<p>You’re already using Flexbox and Grid, I presume, but it’s still surprisingly easy to get caught by this percentage-based height issue. When this happens, the solution is to switch to a more-appropriate layout algorithm. 💖</p>
+<p>If you found this blog post useful, you might like to know that I have an entire course on CSS!</p>
+<p>My course is called CSS for JavaScript Developers(opens in new tab). It‘s like a supercharged version of this blog: there are interactive articles like this one, but also bite-sized videos, challenging exercises, real-world-inspired projects, and even some minigames 😄.</p>
+<p>The course has one goal: to help you build a robust and comprehensive mental model for CSS so that you can use it with confidence and build all sorts of complex UIs without frustration or guesswork.</p>
+<p>I created the course primarily for React/Angular/Vue devs, since I knew so many folks in this situation who understood JS well but struggled with CSS. Most of the course, however, is focused on vanilla CSS principles, so even if you’re not a React expert, you may still benefit a ton from the course.</p>
+<p>Want to know when I publish new content?Enter your email to join my free newsletter:</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.joshwcomeau.com/css/height-enigma/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#4007. A simple explanation of a/(b+c) + b/(c+a) + c/(a+b) = 4</h2>
+    <div class="article-meta">📅 11 May 2025 | other |
+        <a href="https://vitalik.ca/general/2025/05/11/abc4.html" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p></p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://vitalik.ca/general/2025/05/11/abc4.html" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3947. The Post-Developer Era</h2>
+    <div class="article-meta">📅 14 Apr 2025 | technology |
+        <a href="https://www.joshwcomeau.com/blog/the-post-developer-era/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        <img src="https://www.joshwcomeau.com/images/og-the-post-developer-era.jpg" alt="The Post-Developer Era" loading="lazy">
+        <p>Two years ago, in March 2023, I published a blog post called “The End of Front-End Development”. This was right after OpenAI released its GPT-4 showcase, and the general reaction was that human software developers were about to be made redundant, that software would soon be written exclusively by machines.</p>
+<p>I was skeptical of these claims, and in that blog post, I made the case for why I thought software development would still require humans for the foreseeable future. My hypothesis was that LLMs would augment human developers, not replace them.</p>
+<p>At the time, the conventional wisdom on Twitter was that it would only be a few months before AI extinguished all demand for human front-end developers, maybe a year or two at most. Well, it’s been over two years since then! So, were they right? Are we currently living in the “post-developer” era?</p>
+<p>In this blog post, I want to take a fresh look at the current landscape, to see how things have changed, and to see if we can anticipate how things will continue to evolve. If you’re an aspiring developer who is feeling anxious about your future career, my hope is that this post will give you some clarity. ❤️</p>
+<p>Over the past few years, companies have definitely been adopting AI tools more and more. For example, Forbes recently published an article titled “AI Writes Over 25% Of Code At Google”(opens in new tab).</p>
+<p>The article’s title makes it sound like AI is doing 25% of the work and human developers are doing the other 75%, but that’s not actually what’s going on here. That title is misleading, in my opinion.</p>
+<p>AI may be generating 25% of the code that gets committed at Google, but it’s not acting independently. A skilled human developer is in the driver’s seat, using their knowledge and experience to guide the AI, editing and shaping its output, and mixing it in with the code they’ve written. As far as I know, 100% of code at Google is still being created by developers. AI is just one of many tools they use to do their job.</p>
+<p>In other words, it’s not like product teams at Google have fired 25% of their developers and replaced them with pseudo-sentient AI robots who work autonomously and report directly to the product manager. I haven’t heard of that happening at any large tech companies.</p>
+<p>Now, there are startups who claim that their AIs can fully replace human developers. The most popular of these is Devin, a product created by Cognition and released a year ago, in March 2024. But when companies actually try to use it, they run into problems. For example, one team found that Devin could only complete 3 out of 20 assigned tasks(opens in new tab), and it was ultimately more trouble than it was worth. They gave up after a month.</p>
+<p>Here’s some of what their team had to say about it:</p>
+<p>These quotes aren’t from AI skeptics, they’re from a technical team who work for an AI startup, trying the product with enthusiasm and in good faith. And their experience isn’t unusual. I’ve read a handful of other real-world reports, and they all arrive at the same conclusion: this just doesn’t work that well.</p>
+<p>As far as I can tell, every AI success story still has skilled human developers as a necessary ingredient. So, I think it’s safe to say that we’re not living in the post-developer era.</p>
+<p>Over the past couple of years, I’ve experimented with a lot of AI tooling myself. A few months back, I switched to  Cursor(opens in new tab), an AI-powered IDE. I’ve been using its “agent” mode with Claude Sonnet, and I have to admit, it’s pretty remarkable. For certain kinds of tasks, I can give it some context and point it in the right direction, and it whips up a working solution on the first try.</p>
+<p>It’s smart enough to catch and often fix TypeScript or lint errors, and there have even been a few times that I’ve learned something new, where the suggested solution was better than what I had planned to write, thanks to some cool API I wasn’t aware of.</p>
+<p>But it’s not perfect. It does require guidance.</p>
+<p>It feels a bit like driving on the highway with “cruise control”: the car mostly goes where you point it, but you still need a hand on the steering wheel, keeping it steady. Otherwise, the car will slowly start to drift out of its lane. If you don’t occasionally nudge it back on track, you’ll wind up in a ditch.</p>
+<p>And that’s kind of a problem for the “no more developers” theory. If I didn’t know how to code, I wouldn’t notice the subtle-yet-critical issues with the model’s output. I wouldn’t know how to course-correct, or even realize that course-correction was required!</p>
+<p>I’ve heard from no-coders who have built projects using LLMs, and their experience is similar. They start off strong, but eventually reach a point where they just can't progress anymore, no matter how much they coax the AI. The code is a bewildering mess of non sequiturs, and beyond a certain point, no amount of duct tape can keep it together. It collapses under its own weight.</p>
+<p>Also, there are lots of tasks that LLMs just aren’t very good at. There have been times where I’ve spent a frustrating 10 minutes trying to get Claude to understand what I want before giving up and taking 5 minutes to write the code by hand. I’ve started developing an intuition for which tasks can benefit from AI assistance, and which should be tackled the old-fashioned way.</p>
+<p>On balance, I feel like LLMs do save me a significant amount of time. There have been cases where the LLM does 30 minutes of work for me in 30 seconds, and those cases are exhilarating. But, honestly, I think I still spend the majority of the time writing code myself.</p>
+<p>So, here’s an interesting question: are we actually faster when we use AI tools in our development, or does it just feel faster?</p>
+<p>This question was recently explored in a 2025 study(opens in new tab) from METR. They assigned hundreds of real-world open-source tasks to experienced developers. The experiment group used Cursor with Claude 3.5/3.7, while the control group was forbidden from using any sort of AI.</p>
+<p>When developers are allowed to use AI tools, they take 19% longer to complete issues—a significant slowdown that goes against developer beliefs and expert forecasts. This gap between perception and reality is striking: developers expected AI to speed them up by 24%, and even after experiencing the slowdown, they still believed AI had sped them up by 20%.</p>
+<p>So, in this study, developers thought they were working 20% faster, but in fact, they were working 20% slower. 😮</p>
+<p>Now, there are lots of caveats here. The study only looked at 16 developers, and most of those developers had limited prior experience using AI tools. In fact, the participant with the most AI experience was an outlier in the findings, and was able to work 38% faster with AI.</p>
+<p>So, I’m not fully comfortable with the study’s conclusion, but I do think there’s a lot of truth to the idea that we can’t always trust how we feel about our own productivity. We tend to remember the exciting moments where an agent knocks it out of the park, while the less-successful attempts fade from our memory.</p>
+<p>Erik Kennedy summarizes this point well in his post, Where’s the AI Design Renaissance?(opens in new tab):</p>
+<p>My hunch: vibe coding is a lot like stock-picking – everyone’s always blabbing about their big wins. Ask what their annual rate of return is above the S&P, and it’s a quieter conversation 🤫</p>
+<p>When I wrote this post a couple of years back, it was a pretty tough time in the job market. Unfortunately, things are still pretty tough out there.</p>
+<p>If you’re a job-seeker, you know that there aren’t as many high-quality job listings as there used to be, and the good ones get swamped with applications. It’s very hard to get an interview, let alone an offer.</p>
+<p>But I don’t think this is because companies are actually replacing their developers with autonomous AI agents. As I’ve shared, the real-world experiences I’ve read just don’t support that hypothesis. So what gives? Why is it still so brutal out there?</p>
+<p>That last point is particularly frustrating. Companies are not hiring the developers they need because they’re convinced that AGI?Artificial General Intelligence: an AI that can learn and reason like a human, to accomplish any task, even ones that it was never trained to do is right around the corner, and when that egg hatches, we won’t need human developers at all anymore. “It’ll be any week now”, they’ve been saying for years. 😅</p>
+<p>When I wrote “The End of Front-End Development”(opens in new tab) back in 2023, I was trying to reach aspiring developers, folks who are in the process of learning to code, right at the start of their career. I saw how bleak everyone’s predictions were, and wanted to provide a counterweight to all of the FUD?Fear, Uncertainty, and Doubt I saw online.</p>
+<p>And for everything that has changed over the past two years, two things have stayed the same:</p>
+<p>If you’re an aspiring developer, in college or a bootcamp or studying on your own, I still fully believe that there will be opportunities for you when you’re ready to enter the workforce. It seems clear to me that we’re still a long way from software development becoming fully automated. And once companies realize that AI works much better as a developer enhancer than as a developer replacement, I think they’ll stop sabotaging their own growth and start hiring at a more vigorous pace.</p>
+<p>There’s no doubt that AI models will continue to improve. It seems like every week, a new model gets released that breaks records on one benchmark or other. Most recently, it was Google’s turn when they announced Gemini 2.0 Flash and 2.5 Pro models(opens in new tab).</p>
+<p>It seems to me like we’ve reached the point in the technology curve where progress starts becoming more incremental; it’s been a while since anything truly game-changing has come out. Each new model is a little bit better, but it’s more about improving the things it already does well rather than conquering all-new problems.</p>
+<p>And as bleak as the job market feels right now, things are trending in the right direction, at least in the US:</p>
+<p>If AI truly was making software developers redundant, I would expect the total number of tech jobs to be falling at an accelerating rate, but the count has been increasing over the past year. If this trend continues, the market should feel a lot less brutal soon!</p>
+<p>In 2023, I was reasonably confident that AI wasn’t on the cusp of taking our software jobs. Two years in, and I’ve only become more confident in that belief. Knowing how to code is still an incredibly valuable skill and I don’t see that changing anytime soon.</p>
+<p>That said, I’m also not trying to say that everything is great and we’ll all be just fine. 😅</p>
+<p>Last year, Americans inexplicably re-elected a wildly incompetent conman to be president. We’re only a couple of months in, and Trump has already torched the world economy, gutted the federal government, made it an unsafe place to visit for non-citizens, and started a global trade war. It’s hard to anticipate what effect this’ll have on the tech industry, but it certainly won’t be good.</p>
+<p>I also worry a bit about the next generation of developers. When using LLM agents, it’s so easy to get lulled into a trance, to keep hitting “accept changes” without understanding or even looking at the code being generated*“vibe coding”, as it’s known among the cool kids. I caught myself starting to fall into this trap when I was building the landing page for my new course(opens in new tab). I took my hand off the steering wheel for too long, and had to spend a bunch of time refactoring funky junk code as a result.</p>
+<p>The path of least resistance is to sit back and let the machine do its thing, but this prevents us from building the skills we’ll need to debug and fix the code when the machine inevitably gets stuck.</p>
+<p>On the other hand, if you use LLMs proactively, there’s never been a better time to learn how to code. When I get a TypeScript error I don’t understand, AI can often help me understand it, or at least surface the relevant keywords I need in order to find the right docs. It’s like we all have access to our own personal tutor who can help us make sense of things we don’t understand.*Although, that tutor is occasionally on LSD, so we do have to be a little wary of their suggestions 😂</p>
+<p>Nobody knows how the next few years will play out, but it wouldn’t surprise me at all if we see a bit of a “developer renaissance” in a year or two, when companies have finally accepted that human developers are still required, when they realize that a skilled human armed with a powerful LLM can do incredible things. ✨</p>
+<p>If you’re passionate about software development, or if you see it as the best opportunity for you to earn a high salary that’ll lift you into the upper middle class, I really hope you won’t let yourself get discouraged by AI hype. Companies are still hiring, and I don’t see that stopping anytime soon. 💖</p>
+<p>Let’s talk about how to maximize our chances for success in the current job market!</p>
+<p>The first thing to realize is that AI has made the hiring process miserable for companies. Job postings will sometimes get thousands of AI-generated slop applications, and it’s hard for them to sift through all of the junk. If you apply for an open role, it’s very possible that it’ll get buried under a mountain of garbage.</p>
+<p>So, I think there are two solutions to this:</p>
+<p>If you’re brand new to tech, you probably don’t have a network. That’s ok! You can start building one today. 😄</p>
+<p>There are so many different ways to do this. The most obvious is to look for local meetups in your area, which can be a great option to meet developers who work for companies you might want to work for. They can help make sure your application doesn’t get lost in the pile.</p>
+<p>But honestly, if you’re as introverted as I am, this may not be the best option for you. When I tried going to local meetups at the start of my career, I was too shy to approach strangers, so I never met anybody and it never did me any good. 😅</p>
+<p>Fortunately, there are lots of other options. I built my network by building cool stuff and sharing it online. You can contribute to open-source projects, or get to know people in Discord communities. You’ll have the most success if you lean into your strengths, as I share in my blog post “Becoming a Software Developer Without a CS Degree”.</p>
+<p>Also, your community can also help you discover opportunities. Frustratingly, there are lots of online job postings for made-up companies that exist purely as data-harvesting operations. Instead, you can browse through your contacts on LinkedIn and see where they work, and build a list of definitely-real companies to track.</p>
+<p>It’s rough out there, but hopefully these tips help save you some time and trouble! ❤️</p>
+<p>Want to know when I publish new content?Enter your email to join my free newsletter:</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.joshwcomeau.com/blog/the-post-developer-era/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3853. Gamer Games for Non-Gamers</h2>
+    <div class="article-meta">📅 01 Apr 2025 | technology |
+        <a href="https://www.hillelwayne.com/post/vidja-games/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>It’s April Cools! It’s like April Fools, except instead of cringe comedy you make genuine content that’s different from what you usually do. For example, last year I talked about the 3400-year history of the name “Daniel”. This year I wrote about one of my hobbies in hopes it would take less time.</p>
+<p>The video game industry is the biggest entertainment industry in the world. In 2024, it produced almost half a trillion dollars in revenue, compared to the film industry’s “mere” 90 billion. For all the money in it, it feels like gaming is a very niche pastime. It would surprise me if a friend has never watched a movie or listened to music, but it’s pretty normal for a friend to have never played a video game.</p>
+<p>The problem is that games are highly inaccessible. To most people, games are “big budget games”, which are targeted at people who already have played lots of games. They assume the player has a basic “vocabulary” of how games work: conventional keyboard layouts, how to parse information on a screen, etc. If you don’t already know these, it’s a huge barrier and highly demotivating.</p>
+<p>This sucks! I love games. My earliest memory is playing Crystal Caves on my dad’s computer. I’d call myself a gamer, in the same way I’d call some of my friends cinephiles. I want to make gaming more accessible to my non-gamer friends.</p>
+<p>That means finding good entry points. Here are my criteria for a good introductory game:</p>
+<p>So here are four games that I know that fit these criteria. I also included a tiny bit about each game’s historical context because I’m a history nerd.</p>
+<p>Caveats: I’m a PC gamer, and my favorite genre is puzzle games. This ends up working out here because lots of popular genres need motor skills or investment before they get fun. This is also based on just my own experience. Other enthusiasts might know other good introductory games.</p>
+<p>All of the games listed below are available on mobile and PC. Mobile is more convenient, PC is generally a better experience. Bigger screen, you can sync saves to the cloud, you get to use a keyboard, etc.</p>
+<p>By far the most common way to get PC games is via Steam, an app for purchasing, managing, and automatically updating computer games. You need to make an account first, though. For three of the four games I also included a link to purchase it directly from the developer.</p>
+<p>Description: Move the baba to the flag. That’s it, that’s the whole game.</p>
+<p>So what do you do when the flag is completely blocked by walls?</p>
+<p>You change the rules, of course! Walls only stop you because there is a line of three tiles that spell out [WALL][IS][STOP]. If you break the sentence then you can move through walls. Every other rule, down to the win condition and what you control, works the same way. If you make [FLAG][IS][YOU], then you control the flag.</p>
+<p>As the game progresses, it introduces new rules, objects, and interactions. You use conveyor belts as keys to open doors, melt lava with flowers, and turn bees into teleporters.</p>
+<p>Why it’s fun: It’s mentally challenging and makes you feel smart. A good puzzle game is designed around the “insights”, where you realize that something you never considered is possible within the game rules. Baba is You is a very good puzzle game.</p>
+<p>One clever thing that the game does is Extra Levels. After you beat certain levels, it opens up an optional level with a very slight difference to the puzzle layout… a slight difference that leads to a wildly different solution.</p>
+<p>Why it’s good: Well first of all, like all the other games here, it’s good because I’ve shown it to a non-gamer and watched them fall in love. Any rambling about the nature of games is secondary to that reason.</p>
+<p>On top of that, it also shows just how much creativity is possible in a game. The rules of Baba is You are about how you change the rules. It’s “thinking outside the box”, the game. I just find that people are very surprised to realize that this is a real thing a game can make happen, and that games can get even stranger than this.</p>
+<p>More on the genre: Baba is You is a “Sokoban”-style game. This category is named after… Sokoban, a puzzle game from 1982 where you push blocks around on a grid.</p>
+<p>Early Sokoban-style games were all about long chains of exacting moves. Modern Sokobans instead prioritize short solutions based on an insight: levels should feel impossible until they suddenly become trivial. One of the best examples of this philosophy is Stephen’s Sausage Roll, which profoundly influenced modern puzzle games. It is also ludicrously difficult and impossible to recommend to puzzling beginners.1 But if you enjoy other Sokobans, this one’s sublime.</p>
+<p>I bought this game because I thought it had to be a joke. Turns out, it was a joke. The punchline is that I am stupid. — SSR Review</p>
+<p>If you liked Baba is You, the next game I’d recommend is Patrick’s Parabox. It starts with regular block-pushing and rapidly descends into recursive infinities.</p>
+<p>Description: You just inherited your grandfather’s farm in a small rural town. Raise crops, keep animals, build relationships with the townsfolk, explore the world.</p>
+<p>Gameplay is broken up into days. You might start a day by watering and harvesting crops, move to chopping wood and setting crab pots, then close out by exploring a cave for gems. You might spend the next day just fishing at the beach. Seasons change, holidays come and go, and townsfolk keep their own schedules. A large part of the game is tied up with the in-game characters: most of them have personal stories that can only be gradually learned by befriending them.</p>
+<p>There are a few “milestones” in the game but you are not required to complete them and can play the game in the way that is most fun for you.</p>
+<p>Why it’s fun: You get to reap the rewards of investing time into something. The game does a great job of giving you a list of short-term and long-term goals, so it always feels like you are making progress without falling behind on anything. It’s also fun to explore the open world and discover new things.</p>
+<p>Why it’s good: It shows that games don’t have to be violent or intense to be good. Exceptional games can be slow-paced, relaxing, and ground themselves in everyday concerns.</p>
+<p>It’s also the most intricate game on this list, but introduces the complexity in an easy-to-understand way. Lots of games I play that others say are “too complicated” are significantly less complex than Stardew, but they do a bad job of making the complexity accessible.</p>
+<p>More on the genre: Stardew Valley is the reason that farming simulations are a genre. There were a handful of farming sims around before but Stardew made them a thing.2 It’s like comparing a telegraph machine to an iphone.</p>
+<p>Stardew is also a cozy game. Cozy games have been around for a while, but the term itself is fairly new and there’s no consensus on what exactly it means yet. My very rough criteria is 1) there’s no consequences of failure, and 2) intensity and frustration aren’t part of the game, even in a positive way. Action games are intense when you’re in the thick of a fight, puzzle games are frustrating when you hit an unsolvable puzzle, Stardew is neither.3 I think the two most famous cozy games are Animal Crossing and The Sims.</p>
+<p>(I couldn’t tell you what other farming sims to play. At least one game reviewer I respect seems to think none yet measure up to Stardew.)</p>
+<p>The Case of the Golden Idol. (click to enlarge)</p>
+<p>Description: You are presented with the aftermath of a death and have to figure out exactly what happened. To do this, you can zoom in on details in the scene, like inspect people’s pockets, read letters, stuff like that. This gives you keywords, which you put into a giant fill-in-the-blanks prompt to complete the level. There are no penalties for guessing wrong. Early levels are simple, but things get convoluted very quickly.</p>
+<p>Sound confusing? Well guess what, you can try a demo right now in your own browser. See for yourself what it’s like!</p>
+<p>Why it’s fun: The game makes you feel smart. Like Baba, every case here relies in triggering that moment of insight. Except instead of the insight being “making both this rule and this rule might make this move possible”, you have insights like “the knife is *copper*… this is insurance fraud made to look like a murder-suicide.”4 It’s even better when you’re in a group and you race to blurt out the insight first.</p>
+<p>Levels can have multiple locations or even the same location at different times of day. (click to enlarge)</p>
+<p>Why this game: For one, it showcases that games can tell good stories. And not just good stories, but good stories that are good because they are told through the medium of games. Mr Invincible works because it plays with the medium of comic books. Golden Idol works because of its interactivity.  You learn the story by opening drawers and rifling through purses.</p>
+<p>It also shows how games can be an rewarding social experience.5 I played through the whole game with two other friends across several sessions. First dinner, then a few hours of play, rotating who took notes each level. I can’t imagine playing it any other way, and recommend you play it collaboratively, too.</p>
+<p>More on the genre: “Deduction games” are a relatively new style of puzzle. In my experience, they’re the closest a game gets to making you feel like a detective, as opposed to merely detective-themed set dressing. Return of the Obra Dinn was the first game to really nail the concept. It uses a similar mechanic of “viewing the scene of death” but gives you different goals and emphasizes different kinds of clues. Some passing knowledge of 1800’s maritime cliches can be helpful.</p>
+<p>The newest critical darling in the genre is The Roottrees are Dead, where you use the power of the 90’s internet to trace the convoluted family free of a candy dynasty. Originally a free online game, a deluxe version is available on Steam. If it’s half as good as the free online version I can heartily recommend it.</p>
+<p>(Also Golden Idol has a sequel. But play the original game first!)</p>
+<p>A game of Balatro is played in 24 rounds. In each round, you have to assemble a poker hand from a deck of playing cards. Playing a hand gives you points, with rarer hands (like straight flush) giving more points. In between rounds, you get a chance to buy “Jokers”, which change the gameplay in your favor. A joker might give you extra points for playing aces, or let you make flushes with only four cards, or let you remove one card from your deck per round. The jokers you can buy are random, and you will only see a subset in a given game.</p>
+<p>The strategy, then, is to figure out which combination of jokers to buy in order to beat the growing score requirements of the rounds. A single game (or “run”) takes about 40-60 minutes total.</p>
+<p>Why it’s fun: It’s deeply satisfying to pull off a combo that gives you a trillion trillion trillion points. It’s even more satisfying to win a run by the skin of your teeth, and then brag about it to all your Balatro friends.</p>
+<p>Also it swept every 2024 “game of the year” award and is videogame history in the making, so there’s that.</p>
+<p>More on the genre: Baba is You and Golden Idol are organized into handcrafted levels while Stardew Valley is a lovingly-designed open world. Balatro, by contrast, is a roguelike. Each run is a little bit random: you will get slightly different challenges, draw different cards, and get different jokers. It’s kind like Solitaire. Instead of learning how to beat specific levels, you learn how to better adapt to different circumstances. This randomness makes roguelikes popular for their replayability, where you can win a game several times and still find it fun to start over.</p>
+<p>There are many different subcategories of roguelikes, some which look more like traditional “gamer games” and some that are more exotic. Many modern roguelikes were profoundly influenced by the 2017 game Slay the Spire, so much so that “Spirelike” is often used as a term for the subcategory. Play a few and you quickly get a feel for what they all share in common. One of these Spirelikes is Luck be a Landlord, which asks “what if slots took actual strategy?” Balatro draws from both these games, but in an innovative way that makes it feel almost like a piece of outsider art.</p>
+<p>The legion of imitators it [Balatro] already spawned are testament to its rightful place in the PC gaming canon. — PC Gamer</p>
+<p>We know Balatro is going to inspire a new generation of roguelikes but we don’t entirely know what they’ll look like. And that’s really exciting to me! We are watching a tiny piece of gaming history happen right now.</p>
+<p>Thanks to Predrag Gruevski for feedback. If you enjoyed this, check out the April Cools website for all the other pieces this year!</p>
+<p>Pablo Meier wrote a response called Gamer Games for Lite Gamers. He actually wrote it last year but I only remembered to put it up now.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.hillelwayne.com/post/vidja-games/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3859. A Perplexing Javascript Parsing Puzzle</h2>
+    <div class="article-meta">📅 12 Mar 2025 | technology |
+        <a href="https://www.hillelwayne.com/post/javascript-puzzle/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Think it through, then try it in a browser console! Answer and explanation in the dropdown.</p>
+<p>Show answer
+  
+It prints 1.
+wait wtf
+At the beginning of a line (and only at the beginning of a line), --> starts a comment. The JavaScript is parsed as
+x = 1;
+x; // 0 
+
+The browser then displays the value of the last expression, which of course is 1.
+but why
+It’s a legacy hack.
+Netscape Navigator 2 introduced both JavaScript and the <script> tag. Older browsers in common use (like Navigator 1) had no idea that <script> content was anything special and wrote it as regular text on the page.  To ensure graceful degradation, webdevs would wrap their scripts in html comment blocks:
+<script>
+<!--
+console.log("hello world!")
+-->
+</script>
+
+Old browsers would parse the content as an HTML comment and ignore it, new browsers would parse the content as JavaScript and execute it. I’m not quite sure why <!-- and --> weren’t syntax errors; presumably there was special code in the js engines to handle them, but I can’t figure it out where.
+All modern browsers at least recognize <script>.1 But since some old websites still have the hack and the standardization committee will never, ever break the web, they added <!-- and --> as legal comment tokens to the 2015 standard.
+
+<!-- and --> both act like //, i.e. starting line comments. --> is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while <!-- can occur anywhere in the line. — MDN Web Docs
+
+Web browsers are required to support this syntax, while other engines are not. Node and Electron both support it, though, as they share Chromium’s v8 engine.
+
+
+
+Text-only browsers like Lynx recognize the tag, they just choose to ignore the contents.
+ [return]
+
+
+
+show all</p>
+<p>At the beginning of a line (and only at the beginning of a line), --> starts a comment. The JavaScript is parsed as</p>
+<p>The browser then displays the value of the last expression, which of course is 1.</p>
+<p>Netscape Navigator 2 introduced both JavaScript and the <script> tag. Older browsers in common use (like Navigator 1) had no idea that <script> content was anything special and wrote it as regular text on the page.  To ensure graceful degradation, webdevs would wrap their scripts in html comment blocks:</p>
+<p>Old browsers would parse the content as an HTML comment and ignore it, new browsers would parse the content as JavaScript and execute it. I’m not quite sure why <!-- and --> weren’t syntax errors; presumably there was special code in the js engines to handle them, but I can’t figure it out where.</p>
+<p>All modern browsers at least recognize <script>.1 But since some old websites still have the hack and the standardization committee will never, ever break the web, they added <!-- and --> as legal comment tokens to the 2015 standard.</p>
+<p><!-- and --> both act like //, i.e. starting line comments. --> is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while <!-- can occur anywhere in the line. — MDN Web Docs</p>
+<p>Web browsers are required to support this syntax, while other engines are not. Node and Electron both support it, though, as they share Chromium’s v8 engine.</p>
+<p>If you liked this post, come join my newsletter! I write new essays there every week.</p>
+<p>I train companies in formal methods, making software development faster, cheaper, and safer. Learn more here.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.hillelwayne.com/post/javascript-puzzle/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3868. Standards for ANSI escape codes</h2>
+    <div class="article-meta">📅 07 Mar 2025 | technology |
+        <a href="https://jvns.ca/blog/2025/03/07/escape-code-standards/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Hello! Today I want to talk about ANSI escape codes.</p>
+<p>For a long time I was vaguely aware of ANSI escape codes (“that’s how you make
+text red in the terminal and stuff”) but I had no real understanding of where they were
+supposed to be defined or whether or not there were standards for them. I just
+had a kind of vague “there be dragons” feeling around them. While learning
+about the terminal this year, I’ve learned that:</p>
+<p>So I wanted to put together a list for myself of some standards that exist
+around escape codes, because I want to know if they have to feel unreliable
+and frustrating, or if there’s a future where we could all rely on them with
+more confidence.</p>
+<p>Have you ever pressed the left arrow key in your terminal and seen ^[[D?
+That’s an escape code! It’s called an “escape code” because the first character
+is the “escape” character, which is usually written as ESC, \x1b, \E,
+\033, or ^[.</p>
+<p>Escape codes are how your terminal emulator communicates various kinds of
+information (colours, mouse movement, etc) with programs running in the
+terminal. There are two kind of escape codes:</p>
+<p>The first standard I found relating to escape codes was
+ECMA-48,
+which was originally published in 1976.</p>
+<p>The formats are extensible, so there’s room for others to define more escape
+codes in the future. Lots of escape codes that are popular today aren’t defined
+in ECMA-48: for example it’s pretty common for terminal applications (like vim,
+htop, or tmux) to support using the mouse, but ECMA-48 doesn’t define escape
+codes for the mouse.</p>
+<p>There are a bunch of escape codes that aren’t defined in ECMA-48, for example:</p>
+<p>I believe (correct me if I’m wrong!) that these and some others came from
+xterm, are documented in XTerm Control Sequences, and have
+been widely implemented by other terminal emulators.</p>
+<p>This list of “what xterm supports” is not a standard exactly, but xterm is
+extremely influential and so it seems like an important document.</p>
+<p>In the 80s (and to some extent today, but my understanding is that it was MUCH
+more dramatic in the 80s) there was a huge amount of variation in what escape
+codes terminals actually supported.</p>
+<p>To deal with this, there’s a database of escape codes for various terminals
+called “terminfo”.</p>
+<p>It looks like the standard for terminfo is called X/Open Curses, though you need to create
+an account to view that standard for some reason. It defines the database format as well
+as a C library interface (“curses”) for accessing the database.</p>
+<p>For example you can run this bash snippet to see every possible escape code for
+“clear screen” for all of the different terminals your system knows about:</p>
+<p>On my system (and probably every system I’ve ever used?), the terminfo database is managed by ncurses.</p>
+<p>I think it’s interesting that there are two main approaches that applications
+take to handling ANSI escape codes:</p>
+<p>Some examples of programs/libraries that take approach #2 (“don’t use terminfo”) include:</p>
+<p>I got curious about why folks might be moving away from terminfo and I found
+this very interesting and extremely detailed
+rant about terminfo from one of the fish maintainers, which argues that:</p>
+<p>[the terminfo authors] have done a lot of work that, at the time, was
+extremely important and helpful. My point is that it no longer is.</p>
+<p>I’m not going to do it justice so I’m not going to summarize it, I think it’s
+worth reading.</p>
+<p>I was just talking about the idea that you can use a “common set” of escape
+codes that will work for most people. But what is that set? Is there any agreement?</p>
+<p>I really do not know the answer to this at all, but from doing some reading it
+seems like it’s some combination of:</p>
+<p>and maybe ultimately “identify the terminal emulators you think your users are
+going to use most frequently and test in those”, the same way web developers do
+when deciding which CSS features are okay to use</p>
+<p>I don’t think there are any resources like Can I use…? or
+Baseline for the terminal
+though. (in theory terminfo is supposed to be the “caniuse” for the terminal
+but it seems like it often takes 10+ years to add new terminal features when
+people invent them which makes it very limited)</p>
+<p>I also asked on Mastodon why people found terminfo valuable in 2025 and got a
+few reasons that made sense to me:</p>
+<p>The way that ncurses uses the TERM environment variable to decide which
+escape codes to use reminds me of how webservers used to sometimes use the
+browser user agent to decide which version of a website to serve.</p>
+<p>It also seems like it’s had some of the same results – the way iTerm2 reports
+itself as being “xterm-256color” feels similar to how Safari’s user agent is
+“Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_4) AppleWebKit/605.1.15 (KHTML,
+like Gecko) Version/18.3 Safari/605.1.15”. In both cases the terminal emulator
+/ browser ends up changing its user agent to get around user agent detection
+that isn’t working well.</p>
+<p>On the web we ended up deciding that user agent detection was not a good
+practice and to instead focus on standardization so we can serve the same
+HTML/CSS to all browsers. I don’t know if the same approach is the future in
+the terminal though – I think the terminal landscape today is much more
+fragmented than the web ever was as well as being much less well funded.</p>
+<p>A few more documents and standards related to escape codes, in no particular order:</p>
+<p>I sometimes see people saying that the unix terminal is “outdated”, and since I
+love the terminal so much I’m always curious about what incremental changes
+might make it feel less “outdated”.</p>
+<p>Maybe if we had a clearer standards landscape (like we do on the web!) it would
+be easier for terminal emulator developers to build new features and for
+authors of terminal applications to more confidently adopt those features so
+that we can all benefit from them and have a richer experience in the terminal.</p>
+<p>Obviously standardizing ANSI escape codes is not easy (ECMA-48 was first
+published almost 50 years ago and we’re still not there!). I don’t even know
+what all of the challenges are. But the situation with HTML/CSS/JS used to be
+extremely bad too and now it’s MUCH better, so maybe there’s hope.</p>
+<p>How to add a directory to your PATH
+Using `make` to compile C programs (for non-C-programmers)</p>
+<p>You might also like the Recurse Center, my very favorite programming community (my posts about it)</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://jvns.ca/blog/2025/03/07/escape-code-standards/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3870. The Hierarchy of Controls (or how to stop devs from dropping prod)</h2>
+    <div class="article-meta">📅 04 Mar 2025 | technology |
+        <a href="https://www.hillelwayne.com/post/hoc/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>The other day a mechanical engineer introduced me to the Hierarchy of Controls (HoC), an important concept in workplace safety. 1</p>
+<p>To protect people from hazards, system designers should seek to use the most effective controls available. This means elimination over substitution, substitution over engineering controls, etc.</p>
+<p>Can we use the Hierarchy of Controls in software engineering? Software environments are different than physical environments, but maybe there are some ideas worth extracting. Let’s go through the exercise of applying HoC to an example problem: a production outage I caused as junior developer.</p>
+<p>About ten years ago I was trying to debug an issue in production. I had an SSHed production shell and a local developer shell side by side, tabbed into the wrong one, and ran the wrong query.</p>
+<p>That’s when I got a new lesson: how to restore a production database from backup.</p>
+<p>In process safety, the hazard is whatever makes an injury possible: a ladder makes falls possible, a hydraulic press makes crushed fingers possible. In my case, the hazard might have been a production shell with unrestricted privileges, which made losing production data possible. The specific injuries include both dropping the database directly (like I did) or running a delete query on the database. I’ll use both injuries to discuss different kinds of hazard controls.</p>
+<p>The HoC was designed to protect people from machines, not machines from people! I found most of the concepts translate pretty well, but I ran into some issues with PPE.</p>
+<p>There’s also lots of room to quibble over whether something is one category or the other. As part of writing this, I’m also trying to figure out the qualitative differences between the categories. This is my own interpretation as a total beginner.</p>
+<p>Finally, the HoC is concerned with prevention of injury, not recovery from injury. Software best practices like “make regular database backups” and “have a postmortem after incidents” don’t fit into the hierarchy.</p>
+<p>All quotes come from the OSHA HoC worksheet.</p>
+<p>Elimination makes sure the hazard no longer exists.</p>
+<p>Elimination is the most direct way to prevent an accident: don’t have the hazard. All the various OSHA materials use the same example: if you want to reduce falling injuries, stop making workers do work at heights. In our case, we could eliminate the production environment or we could eliminate the database.</p>
+<p>Neither is exactly practical, and most HoC resources are quick to point out that proper elimination often isn’t possible. We work with hazardous materials because they are essential to our process. “Elimination” seems most useful as a check of “is this dangerous thing really necessary?” Essential hazards cannot be eliminated, but inessential hazards can. Before it was decommissioned in 2020, Adobe Flash was one of the biggest sources of security exploits. The easiest way to protect yourself? Uninstall Flash.</p>
+<p>Substitution means changing out a material or process to reduce the hazard.</p>
+<p>Unlike elimination, substitution keeps the hazard but reduces how dangerous it is. If the hazard is toxic pesticides, we can use a lower-toxicity pesticide. If it’s a noisy machine, we can replace it with a quieter machine. If the hazard is a memory unsafe language, we use Rust.</p>
+<p>For our problem I can see a couple of possible substitutions. We can substitute the production shell for a weaker shell. Consider if one “production” server could only see a read replica of the database. Delete queries would do nothing and even dropping the database wouldn’t lose data. Alternatively, we could use an immutable record system, like an event source model. Then “deleting data” takes the form of “adding deletion records to the database”. Accidental deletions are trivially reversible by adding more “undelete” records on top of them.</p>
+<p>Engineering controls reduce exposure by preventing hazards from coming into contact with workers. They still allow workers to do their jobs, though.</p>
+<p>Engineering controls maintain the same danger of the hazard but use additional physical designs to mitigate the risk and severity of accidents. We can do this in a lot of ways: we can reduce the need for workers to expose themselves to a hazard, make it less likely for a hazard to trigger an accident, or make accidents less likely to cause injury.</p>
+<p>There is a lot more room for creativity in engineering controls than in elimination or substitution. Some ideas for engineering controls:</p>
+<p>Some engineering controls are more effective than others. A famously “weak” control is a confirmation box:</p>
+<p>The problem with this is that if I run this a lot in my local environment, I’ll build up the muscle memory to press y, which will ruin my day when I do the same thing in prod.</p>
+<p>A famously “strong” control is the “full name” confirmation box:2</p>
+<p>Even if I have muscle memory, it’d be muscle memory to type local, which would block the action. You can see a real example of this if you try to delete a repo on Github:</p>
+<p>Some of OSHA’s examples of engineering controls look like substitutions to me, and vice versa. My heuristic for the distinction is that engineering controls can fail, substitutions cannot. What if permissions are misconfigured and they don’t actually prevent me from deleting the database? Whereas if the environment is only exposed to a read replica, I can’t magically destroy the write replica. I hope.</p>
+<p>This is an imperfect heuristic, though! Swapping C for Rust would be a substitution, even though some of Rust’s guarantees are bypassable with unsafe.</p>
+<p>Administrative controls change the way work is done or give workers more information by providing workers with relevant procedures, training, or warnings.</p>
+<p>Engineering controls change the technology, administrative controls change the people. Controls that change how people interact with the technology could be in either category; I got into a long discussion over whether “full name” confirmation boxes are an administrative or engineering control. You could reasonably argue it either way.</p>
+<p>OSHA further classifies “automated warnings” as a kind of administrative control. That would be something like “logging into production posts a message to Slack”.</p>
+<p>On the hierarchy, administrative controls are lower than engineering controls for a couple of reasons. One, engineering controls are embedded in the system, while administrative controls are social. Everybody needs to be trained to follow them. Second, in all of the HoC examples I’ve seen, it takes effort to break the engineering control, while it takes effort to follow the administrative control. You might not follow them if you are rushed, forgetful, inattentive, etc.</p>
+<p>Some administrative controls can be lifted into engineering controls. A company policy that junior engineers should never SSH into prod is an administrative control, and relies on everybody following the rules. A setup where juniors don’t have the appropriate SSH keys is an engineering control.</p>
+<p>Personal protective equipment (PPE) includes clothing and devices to protect workers.</p>
+<p>This is the lowest level of control: provide equipment to people to protect them from the hazard. PPE can reduce the risk of injury (I am less likely to be run over by a forklift if I am wearing a reflective vest) or the severity (a hard hat doesn’t prevent objects from falling on me, but it cushions the impact).</p>
+<p>I think PPE is the least applicable control in software. First of all, HoC is meant to protect humans, while in software we want to protect systems. So is software PPE worn by people to prevent damage to systems, or worn by systems to prevent damage from people? An example of “human PPE” could be to use red background for production terminals and a blue background for development terminals. All the examples of “system PPE” I can come up with arguably count as engineering controls.</p>
+<p>Second, PPE isn’t an engineering control because engineering controls modify hazards, while PPE is a third entity between people and the hazard. But anything between a person and the software is also software! Even something like “use Postman instead of curl” is more a mix of engineering/admin than “true” PPE.</p>
+<p>I can think of two places where PPE makes more sense. The first is security, where PPE includes things like secure browsers, 2FA, and password managers are all kinds of PPE. The second is PPE for reducing common software developer injuries, like carpal tunnel, back pain, and eyestrain. These places “work” because they involve people being injured, which was what the HoC was designed for in the first place.</p>
+<p>PPE comes lower in the hierarchy than administrative controls because employees need discipline and training to use PPE effectively. In the real world, PPE is often bulky and uncomfortable, and 90% of the time isn’t actually protecting you (because you’re not in danger). One paper on construction accidents found that injured workers were not wearing PPE in 65% of the studied accidents. To maximize the benefit of PPE you need to train people and enforce use, and that means already having administrative controls in place.</p>
+<p>Higher tiers of controls do more to eliminate danger, but are harder to implement. Lower tiers are less effective, but more versatile and cheaper to implement.</p>
+<p>I’m still working out exactly what this thought is, but: in the real world, people interact with hazards through “natural interfaces”, basically as an object situated in space. If I’m working with a hydraulic press, by default I can put my hand in there. We need to add additional physical entities to the system to prevent the injury, or train people on how to use the physical entity properly.</p>
+<p>In software, all interfaces are constructed and artificial: hazards come from us adding capabilities to do harm. It’s easier for us to construct the interface in a different way that diminishes the capacity for injury, or in a way that enforces the administrative control as a constraint.</p>
+<p>This came up once at a previous job. Our usage patterns meant that it was safest to deploy new versions off-peak hours. “Only deploy off-peak” is an administrative control. So we added a line to the deploy script that checked when it was being run and threw an error if it during peak times. That’s turning an administrative control into an engineering one.3</p>
+<p>Also, real world engineering controls are expensive, which is a big reason to choose administrative controls and PPE. But software can be modified much more quickly and cheaply than physical systems can, which makes engineering controls more effective.</p>
+<p>(I think there’s a similar argument for substitutions, too.)</p>
+<p>If you looked at the OSHA worksheet I linked above, you’d see an interesting section here:</p>
+<p>Any possible control method can potentially introduce new risks into the workplace. Lots of administrative alarms cause alarm fatigue, so people miss the critical alerts. Forbidding personnel from entering a warehouse might force them to detour through a different hazard. Reflective vests can be caught on machinery. The safety of the whole system must be considered holistically: local improvements in safety can cause problems elsewhere.</p>
+<p>We see this in software too. Lorin Hochstein has a talk on how lots of Netflix outages were caused by software meant to protect the system.</p>
+<p>I find that it’s harder to identify new hazards that could be caused by controls than it is to identify existing hazards.</p>
+<p>That’s HoC in a nutshell. I think it’s a good idea!</p>
+<p>If you liked this post, come join my newsletter! I write new essays there every week.</p>
+<p>I train companies in formal methods, making software development faster, cheaper, and safer. Learn more here.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.hillelwayne.com/post/hoc/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3955. A Million Little Secrets</h2>
+    <div class="article-meta">📅 24 Feb 2025 | technology |
+        <a href="https://www.joshwcomeau.com/blog/whimsical-animations/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        <img src="https://www.joshwcomeau.com/images/og-whimsical-animations.jpg" alt="A Million Little Secrets" loading="lazy">
+        <p>For the past few months, I’ve been hard at work on my upcoming third course, Whimsical Animations.</p>
+<p>For each course, I create a custom landing page, and for a course about whimsical animations, I knew the landing page needed to be very extra. It took longer than I’d care to admit, but the course’s landing page(opens in new tab) is now live. 😄</p>
+<p>At first glance, it looks pretty straightforward, even minimal… but there’s a lot going on under the surface. This landing page contains 14,000+ lines of code and 200+ files!</p>
+<p>In today’s blog post, I want to dig into some of the more interesting details and share how I built them. It won’t be a full-blown tutorial, but my goal is to give you a few solid techniques you can start using right away in your own work. ✨</p>
+<p>There are several little surprises baked into the landing page, and this blog post lays many of them out unceremoniously. If you have a few minutes to spare, I’d suggest visiting the page first yourself, and seeing if you can discover them!</p>
+<p>The experience is very limited on mobile. If at all possible, I’d strongly encourage you to visit on desktop.</p>
+<p>If you’re familiar with my work, you know I love including whimsical lil’ details. Every week, I get questions around how I built a particular animation or interaction.</p>
+<p>Whimsical Animations is my attempt to bottle up all of that knowledge and experience into a comprehensive interactive online course. You’ll learn the set of core techniques I use to design and create all sorts of different effects.</p>
+<p>It covers some of the most popular animations and interactions from this blog and my other projects, but my goal is much more broad than that. I want to give you the tools you can use to come up with your own unique effects.</p>
+<p>You’ll learn how to build animations and interactions using vanilla web technologies: CSS, JavaScript, SVG, and 2D Canvas. There will also be some extra content focused on React integration (which should translate reasonably well to other JS frameworks). The bulk of the course focuses on implementation, but we’ll cover the design process as well.</p>
+<p>After more than 18 months of work, registration is finally open! You can learn more and sign up here:</p>
+<p>The main thing that makes this page interesting is the “Chaos Toolbar”, a set of buttons in the top-right that allow the user to manipulate the page.</p>
+<p>For example, the grabber tool lets you pluck and throw individual elements:</p>
+<p>There’s also the bomb tool, which does exactly what you’d expect:</p>
+<p>Each tool has an icon, and each icon has unique animations. Let’s enlarge these icons so that we can examine these animations more closely. Hover or focusTap each icon to see it in action:</p>
+<p>Most hover animations work by applying some sort of transformation on hover, using the transition property to animate that transition:</p>
+<p>I prefer to use a different approach: I briefly apply an override style on hover, but that style unsets itself after a short interval, regardless of whether the user is still hovering or not. This produces a short burst of motion that I call a “boop”.</p>
+<p>I wrote all about “Boop” transitions in an earlier blog post, so I won’t repeat all that stuff here.</p>
+<p>Most of these icons come from Lucide Icons(opens in new tab), my favourite icon pack. The only exception is the bomb, which I created myself in Figma.</p>
+<p>These icons are nice as-is, but in my opinion, it’s the animations that really bring them to life, adding so much character to our UI. Let’s talk about how we can add these sorts of animations.</p>
+<p>Lucide icons are distributed as SVGs. If you open one of these suckers up in your IDE, you’ll see something like this:</p>
+<p>Unlike raster image formats like gif/jpg, SVGs are specified in an XML format, just like HTML tags! In fact, we can directly embed this code in our HTML (or in our JSX). This allows us to manipulate specific portions of our icon!</p>
+<p>A full explanation of SVGs is well beyond the scope of this blog post, although it’s something we’ll cover in depth in the course. To quickly summarize what’s going on here: our eraser icon consists of 3 <path> tags. Each <path> is a set of drawing instructions. When we layer these three instructions together, we get our eraser icon:</p>
+<p>Path A and B are the eraser itself, and Path C is the surface being erased. For our purposes, we want the eraser to move back and forth without affecting the surface:</p>
+<p>We can accomplish this by wrapping the first two paths in a <g> tag, which stands for “group”. Then, we can apply a CSS transform to that group, sliding those two <path> tags along!</p>
+<p>I’m doing a similar trick on the “Bomb” icon. At first glance, it appears to be a standard transform: rotate(), but there’s a bit more to it than that.</p>
+<p>Play along with this slider to exaggerate the effect, to make it clearer:</p>
+<p>To explain what’s going on here: the whole bomb rotates by 10 degrees. Then, on a <path> within the bomb’s SVG, I’m applying a nested rotation to the little fuse. It’s affected by both the parent rotation on the bomb and an additional rotation on the fuse.</p>
+<p>The trick to making this work is to make use of transform-origin to make sure each rotation pivots correctly. The parent rotation is anchored on the center of the bomb’s circle, while the fuse rotation is anchored to the tip of the bomb:</p>
+<p>SVG animation is one of the most important tools in my toolbox, and we’ll be covering it in depth in the course. In the meantime. you can learn more about transform-origin in my blog post, “The World of CSS Transforms”.</p>
+<p>The bomb tool in the Chaos Toolbar has its own little secret feature: if you click and hold, something happens:</p>
+<p>Check it out on the Whimsical Animations landing page(opens in new tab).</p>
+<p>The fourth tool in the Chaos Toolbar, the magic wand, is by far the most elaborate. Several elements on the page can be transformed, with unpredictable results. For example, the main heading can swap between different styles:</p>
+<p>Whenever an element is transformed, the wand cursor emits a few stars. This is an example of a particle effect, and it’s one of my favourite “genres” of effects.</p>
+<p>You might notice that the particles don’t fire in a completely random direction. They all wind up within a 45° cone:</p>
+<p>Each particle is positioned right under the cursor using absolute positioning and top / left, with transform: translate() used to fling them up and to the left. But how do we come up with the specific values for each particle?</p>
+<p>The key is to think in terms of polar coordinates. This stuff gets so much easier to reason about with the right coordinate system.</p>
+<p>On the web, we’re used to thinking in terms of cartesian coordinates: we specify things in terms of their X/Y displacement. transform: translate(-30px, 10px) will move the element 30 pixels to the left and 10 pixels down.</p>
+<p>With polar coordinates, we don’t think in terms of X and Y. We think in terms of angle and distance.</p>
+<p>This will be easier to explain with a demo. ClickTap around inside each graph to see how the coordinates are calculated. If you don’t use a pointer device, you can also use the keyboard by focusing the handle and using the arrow keys:</p>
+<p>With cartesian coordinates, it’s not really clear how to come up with valid X/Y values for my wand effect. But with polar coordinates, it’s pretty straightforward; I can generate random values within a specified range:</p>
+<p>(random is a small utility function that picks a random number between two values.)</p>
+<p>Now, we can’t actually apply a CSS transformation using polar coordinates; we need to convert them back to cartesian values before we can use them. This can be accomplished with trigonometry. I’ll spare you the math and give you the formula:</p>
+<p>I used to do all this logic in JavaScript and apply the final value in CSS, but these days, CSS has trigonometric functions built in! By combining them with CSS variables, we can set up a keyframe animation like this:</p>
+<p>Then, when we render our particles, we define --angle and --distance for each one. Here’s what that looks like in JSX:</p>
+<p>This is the core strategy I’ve been using for particles, and it works great. There’s a bunch of other stuff we can do to make it even better, like:</p>
+<p>Unless you’re a math enthusiast, this “polar coordinates” stuff probably doesn’t send a thrill up your leg, but honestly, it’s a critical concept for the sorts of things I build, one of the secret little keys that I rely on all the time.</p>
+<p>For example, the interactive rainbow on this blog’s homepage(opens in new tab) relies on polar coordinates:</p>
+<p>So does this “angle” control I created for my Gradient Generator:</p>
+<p>And this absolutely-ridiculous effect in  Tinkersynth(opens in new tab), my generative art toy, relies entirely on shifting between cartesian and polar coordinates:</p>
+<p>These are the first three examples that came to mind, but the list goes on and on. We’ll see more examples in the course. 😄</p>
+<p>The “Whimsical Animations” landing page is littered with random shapes: tubes and octahedrons and eggs, all sorts of stuff.</p>
+<p>I made these shapes myself using Blender, which is 3D modeling software. After creating 22 of these lil’ shapes, I realized I had a problem. 😬</p>
+<p>Most optimization tools I use, like next/image, strip out color profile information. They flatten my beautiful wide-gamut images into the sRGB color space, losing a ton of richness and vibrance in the process:</p>
+<p>If the two images look the same to you, it’s likely because you’re not using a display that supports the P3 color space.</p>
+<p>When I keep them in their native P3 color space, each image is between 50kb and 150kb. With 22 individual images, I’d be sending almost two megabytes of assets, which feels like way too much for decorative images like this!</p>
+<p>It would also mean that each image would blink into existence whenever it finished loading, on its own schedule, creating a distracting flurry with no rhyme or reason.</p>
+<p>To solve these problems, I used a sprite. ✨</p>
+<p>A sprite is a single image that contains all of the individual shapes packed together. Here’s a shrunk-down version:</p>
+<p>In my markup, I create individual <img> tags for each shape, using the object-position property to pan around inside the image and show a single shape. The code looks something like this:</p>
+<p>This is pretty tedious work: using image-editing software, I go through the shapes one by one, measuring its distance from the top/left corner, as well as its width/height. I hardcode all of this data in a big JSON object, and then map over it and render an <img> tag for each one.</p>
+<p>In order for images to look crisp on high-DPR displays like Apple’s Retina displays, the image is actually twice as big as its displayed size. I use transform: scale(0.5) to shrink it down to its intended size. Ideally, I should have two or three different versions of the spritesheet and swap between them based on the monitor’s display pixel ratio, but ultimately this’ll still look fine on standard displays.</p>
+<p>By using a sprite, we also solve the problem of each image popping in whenever it finishes loading. Instead, I set it up so that the images would fade in sequence, starting from the center and moving outwards. Here’s what that looks like, at half-speed:</p>
+<p>This fade animation uses a keyframe animation:</p>
+<p>Then, I use animation-duration and animation-delay to create the staggered swelling effect:</p>
+<p>Each <img> element is given custom values for both animation-duration and animation-delay, based on their perceived distance from the center of the screen.*I’m oversimplifying a bit here; I actually gave each element a “fadeScale” value between 0 and 1, and then normalized that value based on min/max values I could tweak to come up with the perfect sequence.</p>
+<p>This works great on localhost, but it doesn’t work in production: keyframe animations start immediately, the moment the <img> element is created. It doesn’t wait for the image to be loaded!</p>
+<p>On first render, this component doesn’t specify any UI. It creates a detached dummy image and registers an onload handler. When the image has finished downloading, I change a state variable, which causes all of the <img> tags to be created. This way, the fade sequence only starts when the image is available.</p>
+<p>Several readers have reached out to let me know that .webp images can indeed preserve color profiles! The tool I was using (Google’s cwebp(opens in new tab)) strips it out, but other tools work a bit better.</p>
+<p>By moving from png to webp, it’s possible to reduce the size of this sprite from almost 500kb to under 200kb, without sacrificing vibrant colors! 🎉</p>
+<p>Two of the assorted shapes are intended to be translucent, made of glass. I thought it would be fun if they also blurred anything that moved behind them. Using the bomb, you can reposition the glass shapes to sit in front of stuff, like this:</p>
+<p>This was surprisingly tricky. Blender does include the transparency as part of its export, but it was too clear. It didn’t look realistic. Plus, the png compression added some weird artifacts:</p>
+<p>I recently wrote about the backdrop-filter property, which allows us to apply a blurring algorithm to everything behind an element, but things didn’t quite work out:</p>
+<p>backdrop-filter works based on the shape of the <img> DOM node. It’s not smart enough to only apply the blurring to the stuff behind the opaque pixels within the image!</p>
+<p>To solve this problem, I used the clip-path property to draw a polygon in the shape of the glass pane, fiddling with the points until it looked right. Here’s the shape of that polygon:</p>
+<p>The polygon() function doesn’t allow us to specify a corner radius for rounded corners, so our clipped area isn’t perfect, but it’s close enough to work well in this situation. 😄</p>
+<p>In an earlier version of this landing page, I used pieces of candy rather than the random shapes you see now:</p>
+<p>I spent a few days creating all of these assets by hand in Blender, and then realized that it didn’t feel right. I was focused on making each type of candy look realistic, like adding small sugar crystals on the gummy worms. When I put them all together on a landing page, though, it didn’t feel cohesive. I also wasn’t sure I wanted to use candy as a metaphor for the course. So in the end, the candy got thrown out.</p>
+<p>I am a perfectionist when it comes to the work I release, which means I spend a lot of time on stuff that y’all never see. This landing page took many weeks of full-time work, with lots of iteration and revision. Please don’t think that I whipped this up over a weekend, or that you’re seeing my very first attempt. 😅</p>
+<p>So this was totally unnecessary, but I built a fully-functional synthesizer. 😅</p>
+<p>The synthesizer is revealed by transforming the signup form using the “wand” tool. It’s exclusive to the desktop experience.</p>
+<p>The synthesizer is played either by clicking the keys with your mouse, pressing keys on a QWERTY keyboard, or with a MIDI controller. All of the sound it makes is generated live in-browser; no pre-recorded audio is used*A single audio file of a long echo is used for the convolution effect, enabled with the “Reverb” slider. I built it using the Web Audio API. Most stuff was built from scratch, though I did use  tuna(opens in new tab) for some of the effects.</p>
+<p>For most of the bells and whistles on this landing page, I tried to pick things strategically, showing off the things you’ll actually learn to build in the course. For this one, though, it was purely an exercise in self-indulgence 😅. We won’t cover the Web Audio API in the course.</p>
+<p>That said, there are some pretty interesting UI details here too. For example: aside from the nameplate in the top-left corner, zero images are used. The UI was created entirely using layered gradients and shadows!</p>
+<p>Doing this sort of “CSS art” can seem really intimidating, but it’s honestly not as scary as I expected. It’s actually pretty remarkable how good things look almost by default when you start layering gradients!</p>
+<p>Like all good easter eggs, the synthesizer has 3 hidden features of its own. I won’t spoil them here, but I’ll give you some hints:</p>
+<p>If you’ve poked around with the landing page, you’ve likely discovered that just about everything has a sound effect.</p>
+<p>This is a bit controversial; people generally don’t expect websites to make noise! But our devices do have volume controls, so it’s easy for people to opt out of sound. I think as long as our sound effects are tasteful and not too loud, we can get away with it.</p>
+<p>Lots of folks have told me that they’d love to start adding sound effects to their projects, but they don’t know where to find high-quality sound effects.</p>
+<p>For years, my main source was  freesound.org(opens in new tab). As the name implies, freesound is a huge database of free sound effects. They’re free in both senses of the word: you don’t pay anything to download them, and you’re free to use them however you wish, without restriction.</p>
+<p>That said, browsing freesound often feels like a “needle in a haystack” situation. There are some real gems in there, but you need to sift through a lot of rocks to find them.</p>
+<p>Alternatively, there are paid options. I used  Splice(opens in new tab) to find this “industrial machinery” sample I used for the marble cannon on the confirmation page:</p>
+<p>And finally, the thing I’ve been doing the most recently is recording my own sound effects! Most of the examples we’ll explore in this section were recorded by me, using a Zoom handheld recorder, experimenting with random objects in my environment. Not only is this incredibly fun, but it tends to produce the best results.</p>
+<p>Let’s talk about some of the sound-related tricks I used on this page.</p>
+<p>One of my favourite techniques is to have multiple versions of each sound, to get a bit of natural variation.</p>
+<p>This’ll be easier to explain with a demo. Try to drag the slider, with sound enabled. Flip between the two modes to hear the difference.</p>
+<p>When using the slider, you should hear a quiet ticking sound whenever its value changes. In some environments (like iOS), it’s a bit of a gamble as to whether you’ll actually hear these sounds or not. 😅</p>
+<p>If you don’t hear anything and have confirmed that your device isn’t muted, it may help to play the video just above; that video has sound, and it seems to sometimes enable sound for the rest of the page.</p>
+<p>The Single sample mode plays the exact same sound every time the slider’s value changes, while the Multiple samples mode randomly picks one of five sounds I recorded each time. It’s a subtle difference, but the multi-sample approach feels a bit less robotic to me, a bit more natural. Especially when dragging the slider quickly.</p>
+<p>This is why I’m such a big fan of recording my own sounds. Most existing soundbanks will give you a single “version” of a sound, but when we record our own, we can collect a palette of samples.</p>
+<p>For buttons, I play one sound when the button is pushed, and a separate sound when it’s released:</p>
+<p>To make these samples, I tried pressing a bunch of buttons on various devices I had lying around the house. When I found something that matched the UI, I recorded myself pressing it a bunch of times, and selected the nicest samples.</p>
+<p>Like in the previous example, I’m not playing the exact same sound each time. I have 6 total samples (3 pushing, 3 releasing).</p>
+<p>In a similar vein, the magic wand uses a plunger sample, and I broke the sample up so that it plays the first half of the sound on mouse-down, and the second half on mouse-up:</p>
+<p>One of the easter eggs in the synthesizer is the ability to "pull up" a secret button:</p>
+<p>To make this feel more tactile, I recorded a series of ascending clicks. Specifically, I dragged a pen along the plastic fins of my humidifier, which naturally rose in pitch since the plastic fins get shorter towards the top.</p>
+<p>If you’re a React developer and you’d like to start adding sound effects to your projects, I have a lil’ library that can help! A few years ago, I open-sourced the custom hook I use,  use-sound(opens in new tab).</p>
+<p>Under the hood, it uses  Howler.js(opens in new tab), a longtime battle-tested JavaScript library for playing sounds. So I’m delegating all the hard audio stuff to them.</p>
+<p>To set expectations: it’s not a project I’m actively maintaining, in the traditional sense. I don’t really look at the issues or PRs. But I use it in my own projects and it works well for me, so I figured I’d make it available for anyone else who wants to use it!</p>
+<p>Before the course launched, I had a waitlist that users could sign up for. After entering their email, they saw the following success screen:</p>
+<p>By default, this effect is pretty tame, but things can get pretty wild using the FIREWORKS PER SECOND slider at the bottom of the screen. 😄</p>
+<p>I created these fireworks from scratch using 2D Canvas. No additional libraries were used. The code honestly isn’t too scary; it’s a bunch of smaller ideas (like polar coordinates!) combined to create something that feels complex.</p>
+<p>We’ll build this effect in the course. And in the process, you’ll learn the underlying techniques that can be used to build all sorts of celebratory effects.</p>
+<p>As I mentioned earlier, my main goal with this course is to give you the tools you need to create your own interactions and animations. The web is full of generic NPM-installed confetti and formulaic ChatGPT-generated effects, and they fail to spark joy because we’ve all seen them 100 times before.</p>
+<p>A crucial ingredient for whimsy is novelty. A charming, delightful effect becomes mundane and annoying surprisingly quickly! So I’m not really interested in giving y’all a handful of “whimsy formulas”, or snippets that you can copy/paste. I want to teach you the core building blocks you can use to design and build effects that are unique to you. ✨</p>
+<p>You might’ve noticed that the fireworks don’t make any noise. This might seem like a curious absence, given how lively everything else is!</p>
+<p>All of the sound effects I use on this landing page are short and in direct response to a user action, like pushing a button or dragging a slider. The fireworks happen automatically, and they run forever. Sound effects might’ve been charming for the first few seconds, but they would quickly become irritating.</p>
+<p>I thought about adding a mute button, but some users might not notice it, especially if they’re distracted. I think the ideal solution would be an “unmute” button, so that the fireworks start silent but can have their sound turned on… but making realistic firework sounds seems hard, and not worth the trouble for an opt-in feature.</p>
+<p>Ultimately, we don’t have to add sound effects to everything!</p>
+<p>There’s so much more I could share, like the physics of explodable content or the dozens of people who submitted translations for the main tagline, but this blog post is way too long already. 😅</p>
+<p>If you have any questions about this landing page, or my upcoming course, you can shoot me a message(opens in new tab), or hit me up on Bluesky(opens in new tab).</p>
+<p>And if you’d really like to learn how to do stuff like this, from conception through implementation, you should join the course! Registration is now open. You can learn more here:</p>
+<p>Want to know when I publish new content?Enter your email to join my free newsletter:</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.joshwcomeau.com/blog/whimsical-animations/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#4334. Vrbo Coupon Codes: 40% Off | October 2026</h2>
+    <div class="article-meta">📅 21 Feb 2025 | technology |
+        <a href="https://www.cntraveler.com/story/vrbo-coupon-code" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        <img src="https://media.cntraveler.com/photos/69b83360a611a37a009790e1/16:9/w_1280,c_limit/MAR26_160326_Owen%20Tozer_Cyrus_CNT_OwenTozer_6378_UK_print.jpeg" alt="Vrbo Coupon Codes: 40% Off | October 2026" loading="lazy">
+        <p>Vacation rental services like Vrbo have completely altered how people experience new destinations, opening the doors to lesser-known towns and neighborhoods where hotels are scarce and allowing travelers to better immerse themselves in the everyday lives of the communities they visit. In today’s economy, though, rental listings can be just as expensive as a hotel stay—but that doesn’t mean you should count this type of vacation stay out.</p>
+<p>With Vrbo coupon codes and offers that’ll drop the price on family-friendly homes, lodges for large group trips, and tiny homes made for solo travelers, there are plenty of ways to save. Vrbo rarely offers traditional promo codes though, so it’s key to take advantage of coupons and the following saving hacks if you want to book for less.</p>
+<p>One of the best perks of booking your accommodation through Vrbo is the greater flexibility—and comfort—when it comes to the duration of your stay. There are major discount benefits if you time it right, plus up to 30% off with coupons for specific properties. Vrbo rarely releases sitewide coupon codes; however, they offer discounts on early bookings (on reservations over 60 days in advance), last-minute deals (if you book within 30 days of check-in), and extended stays of 7 nights or more.</p>
+<p>From a beachy Hamptons getaway to a Parisian apartment near the Eiffel Tower, Vrbo makes it easy to save big on spots across the world. Headed to New York for a fall break? You can score up to $855 off this Long Island City apartment-hotel when you book a week-long stay in November. Individual Vrbo listings can have bonus discounts offered by the host, such as mid-week specials, and up to 30% off rates during the location's off-season months.</p>
+<p>Vrbo unveils fresh listings daily, often offering substantial savings for those quick enough to seize the opportunity. If you’re among the first three guests to book a newly listed property (or one added in the last 90 days), you can enjoy up to 40% off your stay. Right now, we're seeing discounts all over the map—in London, Punta Cana, Miami, Las Vegas, and more. Book this bright apartment in Barcelona near Diagonal Mar, for instance, and save $829 on a weekly stay.</p>
+<p>While Vrbo doesn’t offer site-wide fixed discounts for military personnel, educators, or first responders, since prices are set by the hosts, individual hosts can choose to offer their properties at a discount on an ad hoc basis. One example is this seven-bedroom mountain home—nestled into the Smoky Mountains with breathtaking panoramic views—that offers a 10% discount to those who serve in the military, educators, first responders, and church groups.</p>
+<p>Those who are able to verify their military status with ID.me can also take advantage of up to 5% cashback on purchases made on Vrbo. This offer is not valid on bookings that are declined or cancelled. Nurses, first responders, teachers, government employees, and students are all also eligible for up to 5% cash back. Just be sure to confirm your eligibility on ID.me before you book!</p>
+<p>Sometimes, a quick weekend getaway just isn’t enough. Perhaps you’re looking for a full recharge and the chance to fully immerse yourself in a new environment without the full responsibility—and price tag—that homeownership would bring. Use Vrbo coupons and enjoy 10% off seven (or more) night stays. Easily view these deals by filtering for “Weekly discount”, and expect to save an average of $275. Head to New York for a fall trip and save $478 off a weekly stay at this luxury apartment.</p>
+<p>Rates on month-long rentals are even better; save an average of 19% off vacation rentals when you book a stay of 28 days or more—that's an average discount of $845. To find homes that offer this discount in your destination of choice, select the “Monthly discount” filter on the search results page and enter travel dates of 28+ nights to see prices and savings. This gorgeous two-bedroom Parisian apartment is offering savings of $4,277 on monthly stays.</p>
+<p>Travelers can create a free Vrbo account to earn up to 10% off bookings with sign-up. After each trip, travelers will earn OneKeyCash to use on future hotel stays and car rentals booked through Vrbo, but also Expedia and Hotels.com, since the brands share the same rewards program. Members receive 2% in OneKeyCash for every dollar spent on eligible hotels, vacation rentals, activities, packages, car rentals, and cruises, and 0.2% in OneKeyCash for every dollar spent on eligible flights. While it’s not technically a Vrbo coupon code, OneKey rewards are the next closest thing if you want a discount when you book.</p>
+<p>While the OneKey rewards program doesn't require a credit card to join, OneKey Mastercard credit card holders have a fast track to discounts and higher OneKeyCash earning potential. They also get unique benefits like travel insurance, TSA PreCheck credits, cell phone protection, and annual bonuses.</p>
+<p>Browse more verified promo codes from travel brands:</p>
+<p>As the most discerning, up-to-the-minute voice in all things travel, Condé Nast Traveler is the global citizen’s bible and muse, offering both inspiration and vital intel. We understand that time is the greatest luxury, which is why Condé Nast Traveler mines its network of experts and influencers so that you never waste a meal, a drink, or a hotel stay wherever you are in the world.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.cntraveler.com/story/vrbo-coupon-code" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3875. How to add a directory to your PATH</h2>
+    <div class="article-meta">📅 13 Feb 2025 | technology |
+        <a href="https://jvns.ca/blog/2025/02/13/how-to-add-a-directory-to-your-path/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>I was talking to a friend about how to add a directory to your PATH today. It’s
+something that feels “obvious” to me since I’ve been using the terminal for a
+long time, but when I searched for instructions for how to do it, I actually
+couldn’t find something that explained all of the steps – a lot of them just
+said “add this to ~/.bashrc”, but what if you’re not using bash? What if your
+bash config is actually in a different file? And how are you supposed to figure
+out which directory to add anyway?</p>
+<p>So I wanted to try to write down some more complete directions and mention some
+of the gotchas I’ve run into over the years.</p>
+<p>If you’re not sure what shell you’re using, here’s a way to find out. Run this:</p>
+<p>Also bash is the default on Linux and zsh is the default on Mac OS (as of
+2024). I’ll only cover bash, zsh, and fish in these directions.</p>
+<p>Bash has three possible config files: ~/.bashrc, ~/.bash_profile, and ~/.profile.</p>
+<p>If you’re not sure which one your system is set up to use, I’d recommend
+testing this way:</p>
+<p>(there are a lot of elaborate flow charts out there that explain how bash
+decides which config file to use but IMO it’s not worth it to internalize them
+and just testing is the fastest way to be sure)</p>
+<p>Let’s say that you’re trying to install and run a program called http-server
+and it doesn’t work, like this:</p>
+<p>How do you find what directory http-server is in? Honestly in general this is
+not that easy – often the answer is something like “it depends on how npm is
+configured”. A few ideas:</p>
+<p>Once you’ve found a directory you think might be the right one, make sure it’s
+actually correct! For example, I found out that on my machine, http-server is
+in ~/.npm-global/bin. I can make sure that it’s the right directory by trying to
+run the program http-server in that directory like this:</p>
+<p>It worked! Now that you know what directory you need to add to your PATH,
+let’s move to the next step!</p>
+<p>Now we have the 2 critical pieces of information we need:</p>
+<p>Now what you need to add depends on your shell:</p>
+<p>Open your shell’s config file, and add a line like this:</p>
+<p>(obviously replace ~/.npm-global/bin with the actual directory you’re trying to add)</p>
+<p>You can do the same thing as in bash, but zsh also has some slightly fancier
+syntax you can use if you prefer:</p>
+<p>(in fish you can also use fish_add_path, some notes on that further down)</p>
+<p>Now, an extremely important step: updating your shell’s config won’t take
+effect if you don’t restart it!</p>
+<p>I’ve found that both of these usually work fine.</p>
+<p>And you should be done! Try running the program you were trying to run and
+hopefully it works now.</p>
+<p>If not, here are a couple of problems that you might run into:</p>
+<p>If the wrong version of a program is running, you might need to add the
+directory to the beginning of your PATH instead of the end.</p>
+<p>For example, on my system I have two versions of python3 installed, which I
+can see by running which -a:</p>
+<p>The one your shell will use is the first one listed.</p>
+<p>If you want to use the Homebrew version, you need to add that directory
+(/opt/homebrew/bin) to the beginning of your PATH instead, by putting this in
+your shell’s config file (it’s /opt/homebrew/bin/:$PATH instead of the usual $PATH:/opt/homebrew/bin/)</p>
+<p>All of these directions only work if you’re running the program from your
+shell. If you’re running the program from an IDE, from a GUI, in a cron job,
+or some other way, you’ll need to add the directory to your PATH in a different
+way, and the exact details might depend on the situation.</p>
+<p>I’m honestly not sure how to handle it in an IDE/GUI because I haven’t run into
+that in a long time, will add directions here if someone points me in the right
+direction.</p>
+<p>If you edit your path and start a new shell by running bash (or zsh, or
+fish), you’ll often end up with duplicate PATH entries, because the shell
+keeps adding new things to your PATH every time you start your shell.</p>
+<p>Personally I don’t think I’ve run into a situation where this kind of
+duplication breaks anything, but the duplicates can make it harder to debug
+what’s going on with your PATH if you’re trying to understand its contents.</p>
+<p>How to deduplicate your PATH is shell-specific and there isn’t always a
+built in way to do it so you’ll need to look up how to accomplish it in your
+shell.</p>
+<p>Here’s a situation that’s easy to get into in bash or zsh:</p>
+<p>This happens because in bash, by default, history is not saved until you exit
+the shell.</p>
+<p>When you install cargo (Rust’s installer) for the first time, it gives you
+these instructions for how to set up your PATH, which don’t mention a specific
+directory at all.</p>
+<p>The idea is that you add that line to your shell’s config, and their script
+automatically sets up your PATH (and potentially other things) for you.</p>
+<p>This is pretty common (for example Homebrew suggests you eval brew shellenv), and there are
+two ways to approach this:</p>
+<p>I don’t think there’s anything wrong with doing what the tool suggests (it
+might be the “best way”!), but personally I usually use the second approach
+because I prefer knowing exactly what configuration I’m changing.</p>
+<p>fish has a handy function called fish_add_path that you can run to add a directory to your PATH like this:</p>
+<p>This is cool (it’s such a simple command!) but I’ve stopped using it for a couple of reasons:</p>
+<p>Hopefully this will help some people. Let me know (on Mastodon or Bluesky) if
+you there are other major gotchas that have tripped you up when adding a
+directory to your PATH, or if you have questions about this post!</p>
+<p>Some terminal frustrations
+Standards for ANSI escape codes</p>
+<p>You might also like the Recurse Center, my very favorite programming community (my posts about it)</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://jvns.ca/blog/2025/02/13/how-to-add-a-directory-to-your-path/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3881. Some terminal frustrations</h2>
+    <div class="article-meta">📅 05 Feb 2025 | technology |
+        <a href="https://jvns.ca/blog/2025/02/05/some-terminal-frustrations/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>A few weeks ago I ran a terminal survey (you can read the results here) and at the end I asked:</p>
+<p>What’s the most frustrating thing about using the terminal for you?</p>
+<p>1600 people answered, and I decided to spend a few days categorizing all the
+responses. Along the way I learned that classifying qualitative data is not
+easy but I gave it my best shot. I ended up building a custom
+tool to make it faster to categorize
+everything.</p>
+<p>As with all of my surveys the methodology isn’t particularly scientific. I just
+posted the survey to Mastodon and Twitter, ran it for a couple of days, and got
+answers from whoever happened to see it and felt like responding.</p>
+<p>Here are the top categories of frustrations!</p>
+<p>I think it’s worth keeping in mind while reading these comments that</p>
+<p>These comments aren’t coming from total beginners.</p>
+<p>Here are the categories of frustrations! The number in brackets is the number
+of people with that frustration. I’m mostly writing this up for myself because
+I’m trying to write a zine about the terminal and I wanted to get a sense for
+what people are having trouble with.</p>
+<p>People talked about struggles remembering:</p>
+<p>There are just so many little “trivia” details to remember for full
+functionality. Even after all these years I’ll sometimes forget where it’s 2
+or 1 for stderr, or forget which is which for > and >>.</p>
+<p>People talked about struggling with switching systems (for example home/work
+computer or when SSHing) and running into:</p>
+<p>as well as differences inside the same system like pagers being not consistent
+with each other (git diff pagers, other pagers).</p>
+<p>I got used to fish and vi mode which are not available when I ssh into
+servers, containers.</p>
+<p>Getting my terminal theme configured in a reasonable way between the terminal
+emulator and fish (I did this years ago and remember it being tedious and
+fiddly and now feel like I’m locked into my current theme because it works
+and I dread touching any of that configuration ever again).</p>
+<p>Half of the comments on keyboard shortcuts were about how on Linux/Windows, the
+keyboard shortcut to copy/paste in the terminal is different from in the rest
+of the OS.</p>
+<p>Some other issues with keyboard shortcuts other than copy/paste:</p>
+<p>Aside from “the keyboard shortcut for copy and paste is different”, there were
+a lot of OTHER issues with copy and paste, like:</p>
+<p>There were lots of comments about this, which all came down to the same basic
+complaint – it’s hard to discover useful tools or features! This comment kind of
+summed it all up:</p>
+<p>How difficult it is to learn independently. Most of what I know is an
+assorted collection of stuff I’ve been told by random people over the years.</p>
+<p>A lot of comments about it generally having a steep learning curve. A couple of
+example comments:</p>
+<p>After 15 years of using it, I’m not much faster than using it than I was 5 or
+maybe even 10 years ago.</p>
+<p>That I know I could make my life easier by learning more about the shortcuts
+and commands and configuring the terminal but I don’t spend the time because it
+feels overwhelming.</p>
+<p>It wasted a lot of time until I figured it out and still annoys me that
+“history” on zsh has such a small buffer;  I have to type “history 0” to get
+any useful length of history.</p>
+<p>Finding good examples and docs. Man pages often not enough, have to wade
+through stack overflow</p>
+<p>When resizing the terminal (in particular: making it narrower) leads to
+broken rewrapping of the scrollback content because the commands formatted
+their output based on the terminal window width.</p>
+<p>Lots of comments about how the terminal feels hampered by legacy decisions and
+how users often end up needing to learn implementation details that feel very
+esoteric. One example comment:</p>
+<p>Most of the legacy cruft, it would be great to have a green field
+implementation of the CLI interface.</p>
+<p>Lots of complaints about POSIX shell scripting. There’s a general feeling that
+shell scripting is difficult but also that switching to a different less
+standard scripting language (fish, nushell, etc) brings its own problems.</p>
+<p>Shell scripting. My tolerance to ditch a shell script and go to a scripting
+language is pretty low. It’s just too messy and powerful. Screwing up can be
+costly so I don’t even bother.</p>
+<p>Some more issues that were mentioned at least 10 times:</p>
+<p>There were also 122 answers to the effect of “nothing really” or “only that I
+can’t do EVERYTHING in the terminal”</p>
+<p>Think I’ve found work arounds for most/all frustrations</p>
+<p>I’m not going to make a lot of commentary on these results, but here are a
+couple of categories that feel related to me:</p>
+<p>Trying to categorize all these results in a reasonable way really gave me an
+appreciation for social science researchers’ skills.</p>
+<p>What's involved in getting a "modern" terminal setup?
+How to add a directory to your PATH</p>
+<p>You might also like the Recurse Center, my very favorite programming community (my posts about it)</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://jvns.ca/blog/2025/02/05/some-terminal-frustrations/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3878. Palestinians Stream Back to Northern Gaza on Foot</h2>
+    <div class="article-meta">📅 27 Jan 2025 | other |
+        <a href="https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Israel allowed displaced Gazans to begin crossing a military zone that bisects the enclave after a deadlock over hostage releases was broken.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3883. Leading China Property Developer Reports Huge loss, in Sign of Widening Real-Estate Woes</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Troubles at Vanke raise questions about the continued spread of the property crisis and whether the Chinese state will step in.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3889. Freed Israeli Hostages Still Had Shrapnel in Their Bodies From Oct. 7 Attack</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Some of the women were held alone for extended periods and spent eight months in tunnels, an Israeli medical official said.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3894. Suspected Sabotage of Deep-Sea Cable Triggers First NATO-Led Response</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>The alliance mounted its first coordinated response to a suspected sabotage campaign against critical infrastructure after another cable was severed in the Baltic Sea.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3902. Rwanda-Backed Rebels Enter Congo&#x27;s Safe-Haven City</h2>
+    <div class="article-meta">📅 27 Jan 2025 | other |
+        <a href="https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Residents of Goma reported gunfire and shelling after rebels overran Congolese troops. U.N. officials estimated that more than one million displaced people were now inside the city.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3962. Container Queries Unleashed</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.joshwcomeau.com/css/container-queries-unleashed/" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        <img src="https://www.joshwcomeau.com/images/og-container-queries-unleashed.jpg" alt="Container Queries Unleashed" loading="lazy">
+        <p>In this post, I’ll share the most useful pattern I’ve discovered, so that you can start taking full advantage of container queries in your own work.</p>
+<p>This blog post assumes that you understand the fundamentals of CSS container queries. If you’re still getting the hang of them, you may wish to start with my other post, “A Friendly Introduction to Container Queries”.</p>
+<p>There’s one pattern in particular that I find myself using over and over again. Let’s look at an example, from this blog:</p>
+<p>This layout is used to display newsletter issues.</p>
+<p>On desktop, it’s a two-column layout. The email metadata on the left, the content on the right. On mobile/tablet, it collapses to a single column:</p>
+<p>This is a pretty common design pattern, and it’s easily solved using media queries, but it leads to a curious side-effect: the width of each column actually increases when the viewport shrinks below the mobile threshold.</p>
+<p>Keep your eye on the width of the left-hand column as you shrink the (virtual) window, using the slider:</p>
+<p>When we reach the mobile threshold, our two-column layout becomes a one-column layout, which means the metadata column actually gets bigger, expanding to fill the entire width of its container.</p>
+<p>Now, here’s where it gets tricky. I have two different layouts for the metadata column, depending on the available space:</p>
+<p>When there’s enough room, I want to show the key/value pairs in a single row. Otherwise, the values should move to a new line.</p>
+<p>But we want to do this based on the container’s size, not the viewport’s size! There isn’t a clear linear relationship between the two.</p>
+<p>Here’s the ideal behaviour. Notice how the metadata layout changes back-and-forth as the window changes size:</p>
+<p>We’re using media queries to control the “top-level” layout, flipping from two columns to one column, but we can’t really use media queries to describe how the stuff within those columns should respond dynamically.</p>
+<p>Or, well, technically we can, but it’s messy and fragile. We could do something like this:</p>
+<p>This approach combines multiple media conditions using a comma, which acts like an OR operator. We apply the “Sparse” styles if our viewport is between 35rem to 42rem, or at least 60rem.</p>
+<p>But where did these numbers come from? 35rem, 42rem, and 60rem aren’t breakpoints in our design system, they’re magic numbers. They’re the arbitrary values that happen to work given the current layout. When I’ve gone with this approach in the past, I’ve literally measured the width of the viewport at the points where I wanted it to flip.</p>
+<p>This is extremely fragile. It’ll work as long as none of the styles change, but even minor tweaks like adjusting the padding on one of the columns can cause problems.</p>
+<p>It’s easy to imagine another developer coming along in a few months and tweaking, say, the gap between the columns. All of a sudden, our calculated values are wrong, and the content starts to overflow near those arbitrary breakpoints. The developer probably won’t even notice, since the issue only happens at a narrow range of viewport widths, but some of our users will definitely notice!</p>
+<p>Check out how much nicer the solution is with container queries:</p>
+<p>As we cover in “A Friendly Introduction to Container Queries”, the @container at-rule works just like @media, except it uses the size of a defined container element. We specify which element should act as the container with the new container-type property.</p>
+<p>Instead of 3 arbitrary numbers, we have 1 intentional number; 19rem, in this example, is the actual size that we’ve chosen for the flip, because the “sparse” layout would feel too cramped below that threshold.</p>
+<p>You might feel like it’s still a bit of a code smell that we have to define any breakpoints at all. Shouldn’t the ideal solution flip automatically between layouts based on whether the text can comfortably fit on 1 line or not?</p>
+<p>This sort of “numberless” adaptibility is known as fluid design. Some parts of CSS do work like this, like the flex-wrap property or the auto-fit keyword in CSS Grid.</p>
+<p>Fluid design is wonderful, but it really only works in a narrow set of circumstances. In cases like this, where we have multiple children that all need to flip at the same point, I don’t believe it’s possible to solve this problem with fluid design.</p>
+<p>And honestly, I’m not bothered about having an explicit breakpoint in this sort of situation. It doesn’t feel fragile to me at all; it won’t break if we change unrelated things, like the other column or the parent row, since we’re measuring the metadata column itself.</p>
+<p>You might be wondering: what happens when someone visits using an older browser, one which doesn’t support container queries?</p>
+<p>The great thing about this strategy is that it fails gracefully. For folks on older browsers, the CSS within our @container at-rule will never get applied. The “condensed” styles will never get overwritten, no matter what the container size is.</p>
+<p>This means that our UI won’t stretch out to take advantage of the extra real estate in larger containers, which isn’t ideal, but it also isn’t really a problem. By using min-width container queries, we avoid the real problem of trying to cram too much stuff into a tiny container, leading to overflows and broken UI.</p>
+<p>Containers are defined using the container-type CSS property. This is how we create the boxes that our container queries will measure.</p>
+<p>One of the lesser-known features of this API is that we can choose which container to use, if multiple ancestors establish themselves as containers.</p>
+<p>By default, the nearest ancestor will be used. Try to resize the “RESULT” pane below by dragging the middle divider (or focusing and using left/right arrow keys):</p>
+<p>The RESULT pane can only be resized on larger screens. If you’re on a desktop device, please increase the window size until the RESULT pane sits beside the code editor.</p>
+<p>The setup here is that our .child element has two container ancestors, its parent <section> and grandparent <main>. By default, the nearest ancestor will be used, and indeed, we can see that the element’s parent <section> is currently being used.</p>
+<p>We can manually select a different container, though! Check this out:</p>
+<p>When we define our container query with @container, we can optionally specify a container-name, which allows us to override the default behaviour and specify a different container!</p>
+<p>We can simplify our code a bit by using the container shorthand property:</p>
+<p>The slash character (/) is a modern convention in CSS as a way to separate groups of values. It has nothing to do with division.</p>
+<p>So, I’ve been using container queries in my own work for a few months now, and it still feels to me like we’re just scratching the surface of what’s possible. ✨</p>
+<p>In this blog post, we explored the killer use case I’ve discovered so far: creating sub-layouts within our media queries that expand as the viewport shrinks. I’ve used this trick all over this blog, from the Gradient Generator to my About page:</p>
+<p>I’ve also seen other developers discover the same pattern; Ahmad Shadeed uses it for adjusting the caption on “feature images”, and has a wonderful blog post(opens in new tab) on the subject:</p>
+<p>Once you start using this pattern, you’ll see opportunities for it everywhere. 😄</p>
+<p>And this is just the tip of the iceberg. The ability to select which container is used could unlock some really interesting possibilities, allowing us to create multi-layered UIs, layouts within layouts.</p>
+<p>Whether anyone will be clever enough to use this stuff to its full potential remains to be seen, but it makes me excited for the future of web UIs!</p>
+<p>I’m going to continue experimenting with container queries, and I’d encourage you to as well. Browser engineers have given us some incredible new tech, and now it’s up to us to show them that their time was well spent. 😄</p>
+<p>Did you know I have a comprehensive CSS course? It’s like a supercharged version of this blog: in addition to interactive articles like this one, my course features bite-sized videos, challenging exercises, real-world-inspired projects, and even a few minigames. 😄</p>
+<p>I made it specifically for folks who work with a JS framework like React, Angular, or Vue. Most of the course is focused on CSS principles, but we learn about them in a component-driven context.</p>
+<p>Want to know when I publish new content?Enter your email to join my free newsletter:</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.joshwcomeau.com/css/container-queries-unleashed/" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3908. Cocaine-Funded Gangs Shake Colombia Years After Peace Pact</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.wsj.com/articles/cocaine-funded-gangs-shake-colombia-years-after-peace-pact-a45a28da" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>Attacks by powerful militias against civilians reflect the state’s inaction eight years after a peace accord removed a powerful rebel group from the field.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/cocaine-funded-gangs-shake-colombia-years-after-peace-pact-a45a28da" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3913. Italy Supports Saudi Arabia Joining Fighter-Jet Program, PM Meloni Says</h2>
+    <div class="article-meta">📅 27 Jan 2025 | technology |
+        <a href="https://www.wsj.com/articles/italy-supports-saudi-arabia-joining-gcap-fighter-jet-program-pm-meloni-says-bbd9cec1" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>The U.K., Italy and Japan have already partnered on the Global Combat Air Programme, which aims to put a new stealth fighter with supersonic capability in the skies by 2035.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/italy-supports-saudi-arabia-joining-gcap-fighter-jet-program-pm-meloni-says-bbd9cec1" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3929. Kim Jong Un Is Doing Everything He Can to Keep North Korea&#x27;s Youth in Line</h2>
+    <div class="article-meta">📅 27 Jan 2025 | entertainment |
+        <a href="https://www.wsj.com/articles/kim-jong-un-is-doing-everything-he-can-to-keep-north-koreas-youth-in-line-0866a1de" target="_blank" rel="nofollow">Source</a>
+    </div>
+    <div class="article-body">
+        
+        <p>The dictator, eager to shut out the influence of Hollywood and K-pop, has been exalting a “shock brigade” of 300,000 teens and 20-somethings drafted into flood reconstruction.</p>
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+        <p><a href="https://www.wsj.com/articles/kim-jong-un-is-doing-everything-he-can-to-keep-north-koreas-youth-in-line-0866a1de" target="_blank" rel="nofollow"
+              style="color:#1a73e8;font-weight:bold;">→ Read original</a></p>
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html" class="active">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div>
+<footer>&copy; 2026 News Portal Indonesia.</footer>
+</div>
+</body>
+</html>
