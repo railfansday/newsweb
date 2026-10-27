@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://news2026footballforyoureadnowshareit.surge.sh/sitemap.xml
+Sitemap: https://railfansday.github.io/newsweb/sitemap.xml
